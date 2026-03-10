@@ -1,6 +1,6 @@
 # Networking Module
 module "networking" {
-  source = "../../terraspan-tf-modules/networking"
+  source = "git::ssh://git@github.com/rathoremayank/terraspan-tf-modules.git//networking?ref=main"
 
   vpc_cidr           = var.vpc_cidr
   subnet_cidr        = var.subnet_cidr
@@ -14,7 +14,7 @@ module "networking" {
 
 # Compute Module
 module "compute" {
-  source = "../../terraspan-tf-modules/compute"
+  source = "git::ssh://git@github.com/rathoremayank/terraspan-tf-modules.git//compute?ref=main"
 
   instance_type       = var.instance_type
   instance_name       = var.instance_name
